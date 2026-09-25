@@ -18,19 +18,19 @@ if not all(str(est.get(k, "")).strip() for k in ("nombre", "apellido", "cedula",
 
 p = a.perfil(est["cedula"], est["codigo_sesion"])
 print(f"""
+
 ╔════════════════════════════════════════════════════════════╗
-  TUS PARÁMETROS PERSONALES · {est['nombre']} {est['apellido']}
+  TUS PARÁMETROS PERSONALES · René Mariscal
 ╚════════════════════════════════════════════════════════════╝
- 1. Tema de tu página ............ {p['tema']}
+ 1. Tema de tu página ............ Estación meteorológica
     (debe aparecer en el <title> y en el <h1>)
- 2. id del elemento <main> ........ {p['id_main']}
- 3. class del elemento <main> ..... {p['clase_main']}
- 4. Color principal ............... {p['color']}
+ 2. id del elemento <main> ........ ficha-1565
+ 3. class del elemento <main> ..... k-68814a
+ 4. Color principal ............... #362097
     (úsalo en el CSS: títulos, bordes o fondos)
- 5. Filas de datos en <tbody> ..... {p['filas']}  (cada fila con 3 o más celdas)
- 6. <meta name="author"> .......... {est['nombre']} {est['apellido']}
- 7. <meta name="codigo-sesion"> ... {est['codigo_sesion'].upper()}
+ 5. Filas de datos en <tbody> ..... 6  (cada fila con 3 o más celdas)
+ 6. <meta name="author"> .......... René Mariscal
+ 7. <meta name="codigo-sesion"> ... LAB6-V9S3
  8. <footer> ...................... debe incluir tu nombre y apellido
 
 Estos valores son SOLO tuyos. Un compañero tendrá otros distintos.
-""")
