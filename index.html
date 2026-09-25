@@ -1,2 +1,285 @@
-<!-- TODO: construye aquí tu página (Lab #6) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="René Mariscal">
+  <meta name="description" content="Estación Meteorológica del Campus: sensores, registros históricos y pronóstico del clima universitario.">
+  <meta name="codigo-sesion" content="LAB6-V9S3">
+
+  <title>Estación Meteorológica del Campus</title>
+
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/app.js" defer></script>
+
+  <style>
+    header {
+      background: linear-gradient(90deg, #362097, #5b3fd6);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#inicio">
+      <img src="C:\Users\renes\Downloads\6_logo_utp_-_rgb_oficial.png" alt="Logo de la Estación Meteorológica del Campus" width="120" loading="lazy">
+    </a>
+
+    <form action="#" role="search">
+      <label for="buscar">Buscar</label>
+      <input type="search" id="buscar" name="q" placeholder="Buscar sensor, fecha..." required>
+      <button type="submit">Buscar</button>
+    </form>
+
+    <nav>
+      <ul>
+        <li><a href="#sensores">Sensores</a></li>
+        <li><a href="#registros">Registros</a></li>
+        <li><a href="#pronostico">Pronóstico</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="ficha-1565" class="k-68814a">
+
+    <section id="inicio">
+      <h1>Estación Meteorológica del Campus</h1>
+      <p>
+        La <strong>Estación Meteorológica del Campus</strong> recopila datos en tiempo real
+        sobre <em>temperatura, humedad, presión atmosférica y viento</em> dentro de la universidad.
+        Los datos alimentan <mark>proyectos de investigación de la Facultad de Ingeniería Civil (Ingeniería Ambiental)</mark>
+        y el boletín climático semanal.
+      </p>
+      <p>
+        Como indica nuestro coordinador técnico: <q>medir bien es la base de pronosticar bien</q>.
+        La estación opera desde las <time datetime="2026-01-01T00:00">00:00</time> hasta las
+        <time datetime="2026-01-01T23:59">23:59</time>, todos los días del año.
+      </p>
+
+      <figure>
+        <img src="C:\Users\renes\Downloads\mantenimiento_estaciones_meteorologicas14.jpg" alt="Estación meteorológica instalada en el campus universitario" width="480" loading="lazy">
+        <figcaption>Torre de sensor ubicada al aire libre.</figcaption>
+      </figure>
+    </section>
+
+    <section id="sensores">
+      <h2>Nuestros sensores</h2>
+
+      <article>
+        <h3>Sensor de temperatura</h3>
+        <p>Modelo <code>Vaisala HMP155</code>, con precisión de ±0.17 °C.</p>
+        <p>Reporta cada <sup>1</sup>&frasl;<sub>4</sub> de hora al sistema central.</p>
+      </article>
+
+      <article>
+        <h3>Sensor de humedad</h3>
+        <p>Mide la humedad relativa del aire cada 15 minutos.</p>
+        <p>Rango de operación: <small>0% a 100% de humedad relativa</small>.</p>
+      </article>
+
+      <aside>
+        <h3>Dato curioso</h3>
+        <p>Presiona <kbd>Ctrl</kbd> + <kbd>F</kbd> en el panel web para buscar un registro histórico.</p>
+        <p><del>Antes se leían los instrumentos manualmente</del> <ins>ahora todo el proceso es automático</ins>.</p>
+      </aside>
+
+      <details>
+        <summary>¿Cómo se calibran los sensores?</summary>
+        <p>Cada sensor se calibra trimestralmente con un patrón certificado por el laboratorio de Física.</p>
+      </details>
+    </section>
+
+    <section id="registros">
+      <h2>Registro diario de clima</h2>
+
+      <table>
+        <caption>Registros de la Estación Meteorológica del Campus UTP — Semana actual</caption>
+        <thead>
+          <tr>
+            <th scope="col">Día</th>
+            <th scope="col">Temp. máx.</th>
+            <th scope="col">Temp. mín.</th>
+            <th scope="col">Humedad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Lunes</th>
+            <td>30.5 °C</td>
+            <td>24.2 °C</td>
+            <td>84%</td>
+          </tr>
+          <tr>
+            <th scope="row">Martes</th>
+            <td>31 °C</td>
+            <td>25 °C</td>
+            <td>81%</td>
+          </tr>
+          <tr>
+            <th scope="row">Miércoles</th>
+            <td>30 °C</td>
+            <td>25 °C</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <th scope="row">Jueves</th>
+            <td>29 °C</td>
+            <td>24.5 °C</td>
+            <td>92%</td>
+          </tr>
+          <tr>
+            <th scope="row">Viernes</th>
+            <td>32.2 °C</td>
+            <td>23.8 °C</td>
+            <td>76%</td>
+          </tr>
+          <tr>
+            <th scope="row">Sábado</th>
+            <td>28.5 °C</td>
+            <td>24 °C</td>
+            <td>95%</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Humedad promedio de la semana</td>
+            <td>86.0%</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section id="pronostico">
+      <h2>Pronóstico y alertas</h2>
+
+      <dl>
+        <dt>Alerta amarilla</dt>
+        <dd>Lluvias moderadas esperadas en el área de la Vía Puente Centenario. Se recomienda a la comunidad universitaria portar paraguas y conducir con precaución en los accesos vehiculares del campus.</dd>
+        <dt>Alerta naranja</dt>
+        <dd>Vientos fuertes y ráfagas detectadas en las zonas altas de los edificios académicos. Se suspenden de inmediato todas las actividades laborables, de campo o académicas al aire libre.</dd>
+        <dt>Alerta roja</dt>
+        <dd>Tormenta eléctrica severa sobre el perímetro universitario. Se cierra el campus temporalmente y se ordena la evacuación preventiva hacia zonas seguras techadas.</dd>
+      </dl>
+
+      <ul>
+        <li>Actualización de pronóstico meteorológico cada 6 horas de forma automatizada.</li>
+        <li>Boletín climático semanal enviado directamente a las cuentas oficiales de estudiantes, docentes y administrativos.</li>
+        <li>Historial completo de datos crudos disponible por semestre para proyectos de la Facultad de Ingeniería Civil.</li>
+      </ul>
+
+      <p>
+        Consulta el <abbr title="Índice de Calidad del Aire">ICA</abbr> antes de hacer deporte al aire libre.
+      </p>
+
+      <div style="border: 2px solid #362097; padding: 1rem; border-radius: 8px;">
+        <p>Índice UV actual estimado: <strong>7 (alto)</strong>. Usar protector solar.</p>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <h2>Video y ubicación</h2>
+
+      <video width="480" height="270" controls loading="lazy">
+        <source src="C:\Users\renes\Downloads\Red.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+
+      <iframe width="480" height="270"
+              src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d7880.9308625619515!2d-79.5322824!3d9.0212362!3m2!1i1024!2i768!4f13.1!2m1!1scampus%20utp!5e0!3m2!1ses-419!2spa!4v1790296741421!5m2!1ses-419!2spa"
+              title="Ubicación de la Estación Meteorológica del Campus"
+              loading="lazy"
+              style="border:0;"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+    </section>
+
+    <section id="contacto">
+      <h2>Suscríbete a las alertas climáticas</h2>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name">
+
+          <label for="correo">Correo institucional</label>
+          <input type="email" id="correo" name="correo" placeholder="tucorreo@universidad.edu" required>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" pattern="[0-9]{4}-[0-9]{4}" placeholder="6000-0000">
+
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" name="edad" min="16" max="70" step="1" value="18">
+
+          <label for="fecha">Fecha de inicio de suscripción</label>
+          <input type="date" id="fecha" name="fecha" min="2026-01-01">
+
+          <label for="clave">Crea una contraseña</label>
+          <input type="password" id="clave" name="clave" minlength="6" maxlength="20" required>
+
+          <label for="color-alerta">Color preferido para tus alertas</label>
+          <input type="color" id="color-alerta" name="color-alerta" value="#362097">
+
+          <label for="sitio">Sitio web (opcional)</label>
+          <input type="url" id="sitio" name="sitio" placeholder="https://" readonly disabled>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferencias de alerta</legend>
+
+          <p>Frecuencia:</p>
+          <label for="frecuencia-diaria">Diaria</label>
+          <input type="radio" id="frecuencia-diaria" name="frecuencia" value="diaria" checked>
+          <label for="frecuencia-semanal">Semanal</label>
+          <input type="radio" id="frecuencia-semanal" name="frecuencia" value="semanal">
+
+          <label for="notificaciones">Recibir notificaciones por correo</label>
+          <input type="checkbox" id="notificaciones" name="notificaciones" checked>
+
+          <label for="sensibilidad">Sensibilidad de la alerta</label>
+          <input type="range" id="sensibilidad" name="sensibilidad" min="1" max="10" value="5">
+
+          <label for="tipos-alerta">Tipos de alerta (puedes elegir varias)</label>
+          <select id="tipos-alerta" name="tipos-alerta" multiple>
+            <option value="lluvia">Lluvia</option>
+            <option value="viento">Viento fuerte</option>
+            <option value="calor">Ola de calor</option>
+          </select>
+
+          <label for="hora-preferida">Hora preferida para el boletín</label>
+          <input type="time" id="hora-preferida" name="hora-preferida" list="horas-sugeridas" autofocus>
+          <datalist id="horas-sugeridas">
+            <option value="06:00">
+            <option value="12:00">
+            <option value="18:00">
+          </datalist>
+
+          <label for="comentarios">Comentarios adicionales</label>
+          <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuéntanos qué datos te interesan..."></textarea>
+        </fieldset>
+
+        <button type="submit">Suscribirme</button>
+      </form>
+
+      <noscript>
+        <p>Activa JavaScript en tu navegador para aprovechar todas las funciones interactivas de esta página.</p>
+      </noscript>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="#inicio">Acerca de</a></li>
+      <li><a href="#registros">Registros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <p>&copy; 2026 Estación Meteorológica del Campus UTP — René Mariscal</p>
+  </footer>
+
+</body>
+</html>
  
