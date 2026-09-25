@@ -1,1 +1,139 @@
-/* TODO: escribe aquí tus reglas CSS (Lab #6) */
+/* Reseteo básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #222222;
+  background-color: #fafafa;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  color: #362097;
+}
+
+#ficha-1565 {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.k-68814a {
+  display: block;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+article {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-left: 4px solid #362097;
+}
+
+aside {
+  background: #ece8fb;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Estilos de las tablas de registros */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #cccccc;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+thead {
+  background-color: #362097;
+  color: #ffffff;
+}
+
+form label {
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  max-width: 25rem;
+  padding: 0.4rem;
+  margin-top: 0.2rem;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+}
+
+fieldset {
+  margin-top: 1.2rem;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  background-color: #362097;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #222222;
+  color: #ffffff;
+}
+
+/* Ajuste para las pantallas pequeñas */
+@media (max-width: 700px) {
+  article {
+    width: 100vw;
+    max-width: 90vw;
+  }
+}
