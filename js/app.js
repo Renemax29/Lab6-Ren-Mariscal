@@ -1,4 +1,4 @@
-// Mensaje al cargar la página
+
 console.log("Estación Meteorológica del Campus: página cargada correctamente.");
 
 document.addEventListener("DOMContentLoaded", function () {
